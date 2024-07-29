@@ -4,7 +4,7 @@ session_start();
 include("db.php");
 
 // Define the base URL
-$base_url = "https://a942-41-90-34-177.ngrok-free.app";
+$base_url = "";
 
 function createOrder($con, $userId, $cartItems) {
     $orderId = uniqid(); // Generate a unique order ID
@@ -40,7 +40,7 @@ $userId = $_SESSION['student']['id'];
 $cartItems = isset($_SESSION['cartItems']) ? $_SESSION['cartItems'] : [];
 
 // Set your Stripe secret key
-$stripe_secret_key = "sk_test_51PbQ8vL8czQ0xkyVgdOzMIHRtx9ru3Uip8xdbSg7yVOchwHX10Pcak1Zf7KQqWxhMStwDoy1fxOMWY1kSkNpex1W00WSpIyYt6";
+$stripe_secret_key = "";
 \Stripe\Stripe::setApiKey($stripe_secret_key);
 
 // Prepare line items for the checkout session
